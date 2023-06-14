@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
       elevador.digitarAndar();
 
       LOOP += 1;
-   }while(LOOP != 10);
+   }while(LOOP != 21);
 
 
    system("PAUSE");

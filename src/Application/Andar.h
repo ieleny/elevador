@@ -7,7 +7,7 @@ class Andar {
         int proximoAndar = 0;
         int andarAnterior = 0;
         int andarAtual = 0;
-        int const QUANTIDADEDEANDARES = 20;
+        int const QUANTIDADEDEANDARES = 21;
 
         void setProximoAndar(int proximoAndar) {
             this->proximoAndar = proximoAndar;

@@ -23,16 +23,22 @@ class PainelDesmarcado : public IPainel{
 
         void desenharSubTituloPainel()
         {
-            printf(" | 21 - Botao de Emergencia |\n");
             printf(" ----------------------------\n");
         }
 
         void painelDesmarcado(Andar andar) 
         { 
-            for(int i = 1; i <= andar.getQuantidadeDeAndares(); i++){
-                printf(" |          ");
-                printf(" |%d|",i );
-                printf("           |\n");
+            const int quantidadeAndares = andar.getQuantidadeDeAndares();
+
+            for(int i = 1; i <= quantidadeAndares; i++){
+
+                if(i == quantidadeAndares){
+                    printf(" | %d - Botao de Emergencia |\n",i);
+                }else{
+                    printf(" |          ");
+                    printf(" |%d|",i );
+                    printf("           |\n");
+                }
             }
         }
 

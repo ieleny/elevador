@@ -23,7 +23,6 @@ class PainelMarcado : public IPainel{
 
         void desenharSubTituloPainel()
         {
-            printf(" | 21 - Botao de Emergencia |\n");
             printf(" ----------------------------\n");
         }
 
@@ -33,16 +32,17 @@ class PainelMarcado : public IPainel{
             const int quantidadeAndares = andar.getQuantidadeDeAndares();
 
             for(int i = 1; i <= quantidadeAndares; i++){
-
-                printf(" |          ");
-
-                    if(andarAtual == i){
+                    if(andarAtual == i){  
+                        printf(" |          ");
                         printf(" (%d)",i);
+                        printf("           |\n");
+                    }else if(i == quantidadeAndares){
+                        printf(" | %d - Botao de Emergencia |\n",i);
                     }else{
+                        printf(" |          ");
                         printf(" |%d|",i);
+                        printf("           |\n");
                     }
-
-                printf("           |\n");
             }
         }
 };

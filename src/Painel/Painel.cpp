@@ -20,7 +20,6 @@ class Painel {
         void desenharPainel()
         {
             cout << "Andar Atual: " << andar.getAndarAtual() << endl;
-            cout << "Andar Proximo: " << andar.getProximoAndar() << endl;
             cout << "Andar Anterior: " << andar.getAndarAnterior() << endl;
 
             if(andar.andarTerreo() == 1){
@@ -42,7 +41,7 @@ class Painel {
         {
             if(validation.validarExisteAndar(andarPressionado, andar.getQuantidadeDeAndares()) == 1 && validation.validarAndarEmergencia(andarPressionado, andar.getQuantidadeDeAndares()) == 0){
                 andar.definirAndar(andarPressionado);
-            }else if(andarPressionado == andar.getQuantidadeDeAndares()){
+            }else if(andarPressionado == andar.getQuantidadeDeAndares() ){
                 cout << "Aguarde! Que em algum momento alguem irá te ajudar" << endl;
             }else{
                 cout << "Esse andar nao existe, por favor digite outro numero" << endl;
